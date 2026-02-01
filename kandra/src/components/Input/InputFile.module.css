@@ -1,0 +1,539 @@
+/* InputFile.module.css - Version ultra-responsive */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.container.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.labelDisabled {
+  color: #94a3b8;
+}
+
+.required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.fileInputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.containerError .buttonGroup {
+  border-color: #dc2626;
+}
+
+.containerError .buttonGroup:focus-within {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.buttonGroup:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.buttonGroup:hover:not(:has(.buttonDisabled)) {
+  border-color: #cbd5e1;
+}
+
+.uploadButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadButton:hover:not(.buttonDisabled) {
+  transform: translateY(-1px);
+}
+
+.uploadButton:active:not(.buttonDisabled) {
+  transform: translateY(0);
+}
+
+/* Variantes de bouton */
+.buttonPrimary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.buttonPrimary:hover:not(.buttonDisabled) {
+  background-color: #2563eb;
+}
+
+.buttonSecondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.buttonSecondary:hover:not(.buttonDisabled) {
+  background-color: #4b5563;
+}
+
+.buttonDanger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.buttonDanger:hover:not(.buttonDisabled) {
+  background-color: #dc2626;
+}
+
+.buttonOutline {
+  background-color: transparent;
+  color: #3b82f6;
+  border: 1.5px solid #3b82f6;
+}
+
+.buttonOutline:hover:not(.buttonDisabled) {
+  background-color: #eff6ff;
+}
+
+.buttonDisabled {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+}
+
+.buttonDisabled.buttonOutline {
+  background-color: transparent;
+  color: #cbd5e1;
+  border-color: #e2e8f0;
+}
+
+.fileNameContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+.fileName {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileNameDisabled {
+  color: #94a3b8;
+}
+
+.noFileText {
+  font-size: 14px;
+  color: #64748b;
+  font-style: italic;
+}
+
+.noFileTextDisabled {
+  color: #cbd5e1;
+}
+
+.fileAccept {
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.fileAcceptDisabled {
+  color: #cbd5e1;
+}
+
+.errorMessage {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.helperText {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* ============================================
+   DARK MODE
+============================================ */
+
+:global(body.dark) .label {
+  color: #cbd5e1;
+}
+
+:global(body.dark) .labelDisabled {
+  color: #64748b;
+}
+
+:global(body.dark) .buttonGroup {
+  background-color: #1e293b;
+  border-color: #475569;
+}
+
+:global(body.dark) .buttonGroup:hover:not(:has(.buttonDisabled)) {
+  border-color: #64748b;
+}
+
+:global(body.dark) .buttonGroup:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+:global(body.dark) .buttonPrimary {
+  background-color: #2563eb;
+}
+
+:global(body.dark) .buttonPrimary:hover:not(.buttonDisabled) {
+  background-color: #1d4ed8;
+}
+
+:global(body.dark) .buttonSecondary {
+  background-color: #4b5563;
+}
+
+:global(body.dark) .buttonSecondary:hover:not(.buttonDisabled) {
+  background-color: #374151;
+}
+
+:global(body.dark) .buttonDanger {
+  background-color: #dc2626;
+}
+
+:global(body.dark) .buttonDanger:hover:not(.buttonDisabled) {
+  background-color: #b91c1c;
+}
+
+:global(body.dark) .buttonOutline {
+  background-color: transparent;
+  color: #60a5fa;
+  border-color: #3b82f6;
+}
+
+:global(body.dark) .buttonOutline:hover:not(.buttonDisabled) {
+  background-color: #1e3a8a;
+}
+
+:global(body.dark) .buttonDisabled {
+  background-color: #374151;
+  color: #6b7280;
+}
+
+:global(body.dark) .buttonDisabled.buttonOutline {
+  background-color: transparent;
+  color: #6b7280;
+  border-color: #4b5563;
+}
+
+:global(body.dark) .fileName {
+  color: #f1f5f9;
+}
+
+:global(body.dark) .fileNameDisabled {
+  color: #64748b;
+}
+
+:global(body.dark) .noFileText {
+  color: #94a3b8;
+}
+
+:global(body.dark) .noFileTextDisabled {
+  color: #4b5563;
+}
+
+:global(body.dark) .fileAccept {
+  color: #94a3b8;
+}
+
+:global(body.dark) .fileAcceptDisabled {
+  color: #4b5563;
+}
+
+:global(body.dark) .containerError .buttonGroup {
+  border-color: #f87171;
+}
+
+:global(body.dark) .containerError .buttonGroup:focus-within {
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
+}
+
+:global(body.dark) .helperText {
+  color: #94a3b8;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN ULTRA
+============================================ */
+
+/* Desktop Large */
+@media (min-width: 1400px) {
+  .uploadButton {
+    padding: 11px 22px;
+    font-size: 15px;
+    height: 42px;
+  }
+  
+  .fileName,
+  .noFileText {
+    font-size: 15px;
+  }
+  
+  .fileAccept {
+    font-size: 13px;
+  }
+  
+  .errorMessage,
+  .helperText {
+    font-size: 13px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1200px) {
+  .buttonGroup {
+    gap: 10px;
+    border-radius: 10px;
+  }
+  
+  .uploadButton {
+    padding: 9px 16px;
+    font-size: 13px;
+    height: 38px;
+    border-radius: 8px;
+  }
+  
+  .fileName,
+  .noFileText {
+    font-size: 13px;
+  }
+  
+  .fileAccept {
+    font-size: 11px;
+  }
+  
+  .fileNameContainer {
+    padding: 0 10px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .container {
+    margin-bottom: 12px;
+  }
+  
+  .buttonGroup {
+    gap: 8px;
+    border-radius: 10px;
+  }
+  
+  .uploadButton {
+    padding: 8px 14px;
+    font-size: 12.5px;
+    height: 36px;
+    border-radius: 8px;
+  }
+  
+  .fileName,
+  .noFileText {
+    font-size: 12.5px;
+  }
+  
+  .fileAccept {
+    font-size: 10px;
+  }
+  
+  .fileNameContainer {
+    padding: 0 8px;
+    gap: 2px;
+  }
+  
+  .errorMessage,
+  .helperText {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 576px) {
+  .container {
+    margin-bottom: 10px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .uploadButton {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 12px;
+    height: 36px;
+    justify-content: center;
+  }
+  
+  .fileNameContainer {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .fileName,
+  .noFileText {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .fileAccept {
+    font-size: 10px;
+  }
+  
+  .label {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 400px) {
+  .buttonGroup {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .uploadButton {
+    padding: 7px 10px;
+    font-size: 11.5px;
+    height: 34px;
+  }
+  
+  .fileName,
+  .noFileText {
+    font-size: 11.5px;
+  }
+  
+  .fileAccept {
+    font-size: 9px;
+  }
+  
+  .label {
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .buttonGroup {
+    padding: 6px;
+    border-radius: 8px;
+  }
+  
+  .uploadButton {
+    padding: 6px 8px;
+    font-size: 11px;
+    height: 32px;
+  }
+  
+  .fileName,
+  .noFileText {
+    font-size: 11px;
+  }
+  
+  .fileAccept {
+    font-size: 9px;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+
+.buttonGroup {
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+
+.uploadButton:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.buttonDisabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Screen reader only */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

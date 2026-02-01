@@ -1,0 +1,183 @@
+/* Base button styles */
+.button {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 2.25rem;
+}
+
+/* Button variants */
+.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.primary:hover:not(.disabled) {  
+  background-color: #1d4ed8;
+}
+
+.warning {
+  background-color: #118b5e;
+  color: white;
+}
+
+.warning {
+  background-color: #1aa4ae;
+  color: white;
+}
+
+.warning:hover:not(.disabled) {
+  background-color: #1d996c;
+}
+
+.cartbg {
+  background-color: #2e9fa7;
+  color: white;
+}
+
+.cartbg:hover:not(.disabled) {
+  background-color: #21858c;
+}
+
+.eyebg {
+  background-color: #2e6aa7be;
+  color: white;
+}
+
+.eyebg:hover:not(.disabled) {
+  background-color: #2e6aa7f4;
+}
+
+.secondary {
+  background-color: #4b5563;
+  color: white;
+}
+
+.secondary:hover:not(.disabled) {
+  background-color: #374151;
+}
+
+.danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.danger:hover:not(.disabled) {
+  background-color: #b91c1c;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid #9ca3af;
+  color: #1f2937;
+}
+
+.outline:hover:not(.disabled) {
+  background-color: #f3f4f6;
+}
+
+/* States */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.enabled {
+  cursor: pointer;
+}
+
+/* Loading state */
+.loading {
+  color: transparent;
+}
+
+.loadingContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.loadingDot {
+  width: 0.375rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loadingDefault {
+  background-color: white;
+}
+
+.loadingOutline {
+  background-color: #4b5563;
+}
+
+/* Animation delays for dots */
+.dot1 {
+  animation-delay: -0.32s;
+}
+
+.dot2 {
+  animation-delay: -0.16s;
+}
+
+.dot3 {
+  animation-delay: 0s;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Content and icon styles */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  line-height: 1;
+}
+
+/* Focus styles */
+.button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+
+/* Disabled button hover effect removal */
+.button.disabled:hover {
+  background-color: inherit !important;
+}
